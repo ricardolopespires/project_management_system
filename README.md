@@ -35,7 +35,7 @@ Todo mundo que trablha em equipe conhece os objetivos de uma boa organização t
 
 * Python 3.6.4
 * Django 2.0.4
-* Almofada
+* Pillow
 
 ## Contribuindo
 
