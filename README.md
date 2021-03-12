@@ -1,4 +1,4 @@
-# Project Management System
+# Sistema de gerenciamento de projetos
 
 Todo mundo que trablha em equipe conhece os objetivos de uma boa organização torna o projeto e as tarefa facil de gerenciar e concluir suas próprias tarefas e atribua tarefas a um de seus colegas de equipe
 
@@ -17,30 +17,29 @@ Todo mundo que trablha em equipe conhece os objetivos de uma boa organização t
 
 
 <br>
-
-**Built with Python and Django.**
-
+** Construído com Python e Django. **
 
 
 
-## Resources
 
-* Interface to create your company and users
-* Create projects, tasks, update information
-* Views by users, tasks and projects
-* Log in and out, create your profile, update your profile photo
-* Interact with other users by sending friendly requests, add and remove friends
-* Integration with Amazon AWS S3 for static files
+## Recursos
 
-## Built with
+* Interface para criar sua empresa e usuários
+* Crie projetos, tarefas, atualize informações
+* Visualizações por usuários, tarefas e projetos
+* Faça login e logout, crie seu perfil, atualize sua foto de perfil
+* Interaja com outros usuários enviando solicitações amigáveis, adicione e remova amigos
+* Integração com Amazon AWS S3 para arquivos estáticos
+
+## Construído com
 
 * Python 3.6.4
-* Django  2.0.4
-* Pillow
+* Django 2.0.4
+* Almofada
 
-## Contributing
+## Contribuindo
 
------------------------------------------------------
-If you want to contribute, just open a problem and tell me where I can improve.
-Fork the repository and change whatever you want.
-Pull orders are always welcome.
+-------------------------------------------------- ---
+Se você quiser contribuir, é só abrir um problema e me dizer onde posso melhorar.
+Bifurque o repositório e altere o que quiser.
+Os pedidos de pull são sempre bem-vindos.
