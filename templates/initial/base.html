@@ -17,49 +17,135 @@ Author URL: http://w3layouts.com
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
     <!-- Template CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
-<section class="w3l-header">
-  <nav class="navbar navbar-expand-lg navbar-light py-3">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><span class="fa fa-smile-o"></span>Work<label class="logo-view">smart</label></a>
-      <!-- if logo is image enable this   
-    <a class="navbar-brand" href="#index.html">
-        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-    </a> -->
-      <div class="header-right d-flex align-items-center">
-        <a href="contact.html" class="btn btn-outline-dark d-none d-md-block btn-outline-style mr-4">Contact Us</a>
-        <section class="w3l-menu">
-          <div class="menu-btn">
-            <span class="top"></span>
-            <span class="mid"></span>
-            <span class="bot"></span>
-          </div>
-          <div id="nav">
-            <ul class="nav-inner">
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="about.html">About</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </div>
-  </nav>
-</section>
+   
+
+
+    {% include 'include/navbar.html' %}
 {% block index %}
 
 
 
 
 {% endblock %}
+{% include 'include/footer.html' %}
 
+    <!-- jQuery -->
+    <script src="{% static 'assets/js/jquery-3.4.1.slim.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+      $(function () {
+        $('.navbar-toggler').click(function () {
+          $('body').toggleClass('noscroll');
+        })
+      });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+
+
+
+    <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+    <!-- script for teams1-->
+    <script>
+      $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 0,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true
+            },
+            667: {
+              items: 2,
+              nav: true,
+              margin: 20
+            },
+            1000: {
+              items: 4,
+              nav: true,
+              loop: true,
+              margin: 25
+            }
+          }
+        })
+      })
+    </script>
+    <!-- //script for teams1-->
+
+    <script>
+      $(document).ready(function () {
+
+        var $menuBtn = $('.menu-btn');
+        var $nav = $('#nav');
+        var $stylebox = $('#style-box');
+        var $styleli = $stylebox.find('li');
+
+        $menuBtn.on('click', function () {
+          var $this = $(this);
+          var styles = $stylebox.data('styles');
+          $this.toggleClass("active");
+          $this.next('#nav').toggleClass("open");
+          $stylebox.toggleClass(styles);
+        });
+
+        $nav.addClass('topslide');
+
+        $styleli.on('click', function () {
+          var $this = $(this);
+          $this.siblings().removeClass('now');
+          $this.addClass('now');
+          var styles = $this.data('styles');
+          $nav.removeClass();
+          $nav.addClass(styles);
+          $nav.siblings('#style-box').removeClass();
+          $nav.siblings('#style-box').data('styles', styles);
+        });
+      });
+    </script>
+
+    <script src="{%  static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script>
+      $(document).ready(function () {
+        $('.popup-with-zoom-anim').magnificPopup({
+          type: 'inline',
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: 'auto',
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+          type: 'inline',
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: 'auto',
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-slide-bottom'
+        });
+      });
+    </script>
 
 </body>
 </html>
