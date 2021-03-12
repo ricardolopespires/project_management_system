@@ -1,4 +1,4 @@
-# Project Management Ssystem
+# Project Management System
 
 Todo mundo que trablha em equipe conhece os objetivos de uma boa organização torna o projeto e as tarefa facil de gerenciar e concluir suas próprias tarefas e atribua tarefas a um de seus colegas de equipe
 
