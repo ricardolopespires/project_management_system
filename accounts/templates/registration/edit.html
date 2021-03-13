@@ -1,0 +1,38 @@
+{% extends 'managersettings/settings_profile/base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block profile %}
+    {{ super.block }} 
+
+
+<!-- Main Content -->
+<section class="section section--modifier">        
+
+    <div class="section-body section-body-modifier">
+      <h2 class="section-title">Validação dos dados do usuários</h2>
+      <p class="section-lead">
+        Adicione um novo Cliente no sistema para rede marketing, 
+      </p>           
+      <div class="row">              
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card clientes-form">
+              {# Display a form #}
+          <form style = "margin-left:36px; margin-right:36px;"  action="." method="post" >
+          <div style = "position:relative; right:40px;" class="card-header">
+                  <h4>Validação dos dados do usuários</h4>
+                  </div>
+              {% csrf_token %}
+              {% bootstrap_form form %}
+              {% buttons %}
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              {% endbuttons %}
+          </form>
+          </div>                
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

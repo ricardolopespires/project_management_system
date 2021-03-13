@@ -1,0 +1,63 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+
+{% block management %}
+<div class="section-header">
+    <div class="slider-outer">
+        <div class="slider-inner">
+            <div class="  statistic fron active" data-slider="1">
+                <i class="far fa-trash-alt"></i>
+				
+                <div class="statistic-title">Séries</div>
+                <h2 class="title-statistic-h2">Delete</h2>
+                              
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="section-body">
+    <h2 class="section-title">Deletar o documentário <span style="color: brown; font-size: 20px;">{{ documentary.Title }}</span> </h2>
+    <div class="row">    
+    
+      <div class="col-12 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h4>Ops...., Tem certeza que deseja deletar esse documentário</h4>
+          </div>
+          <div class="card-body">
+            <div class="empty-state" data-height="400">
+              <div class="empty-state-icon bg-danger">
+                <i class="far fa-trash-alt"></i>
+              </div>
+              <h2>Este Documentário será apagado</h2>
+              <p class="lead">
+                As informações sobre <strong>{{ documentary }}</strong>, serão apagado do nossos servidores. (Código: <a href="#" class="bb">{{documentary.imdbID}}</a>)
+              </p>
+              <a href="#" class="btn btn-success mt-4">Comfirmar</a>
+              <a href="{% url 'documentary:details' documentary.imdbID %}" class="mt-4 bb">Cancel</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h4>Not Found</h4>
+          </div>
+          <div class="card-body">
+            <div class="empty-state" data-height="600">
+              <img class="img-fluid" src="../assets/img/drawkit/drawkit-nature-man-colour.svg" alt="image">
+              <h2 class="mt-0">Looks like you got lost</h2>
+              <p class="lead">
+                We can't find the path you're looking for, check the path again and try again.
+              </p>
+              <a href="#" class="btn btn-warning mt-4">Try Again</a>
+              <a href="#" class="mt-4 bb">Need Help?</a>
+            </div>
+          </div>
+        </div>
+      </div> 		
+    </div>
+  </div>
+
+{% endblock %}

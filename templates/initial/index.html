@@ -1,462 +1,310 @@
 {% extends 'initial/base.html' %}
-{% load static %}
+{% load static %}		
+
+
 
 {% block index %}
 
-<!-- index-block1 -->
-<div class="w3l-index-block1">
-  <div class="content py-5">
-    <div class="container py-lg-4">
-      <div class="row align-items-center">
-        <div class="col-lg-5 mt-auto content-left">
-          <div class="banner__subtitle">Gerenciamento </div>
-          <h1 class="title">Projetos <span class="title--active">Smart<span class="point">.</span></span></h1>
-          <p class="copy">Trabalhando com  <span class="copy__active">Inteligência</span>  para que seu projeto alcançar<span class="copy__active"> o próximo nível</span><span class="point">.</span></p> 
-          <br>
-          <p style="font-size: 15px; color: #000;" class="paragraph text-justify">Gerenciamento de projetos é uma filosofia de capacitar ajudar a planejar, organizar e gerenciar um projeto.
-            Quando as equipes têm clareza sobre o trabalho que está sendo executado. Experimente o Smartsheet gratuitamente hoje .</p>
+<section class="banner">
+	<div class="hero-conteudo">
+        <div class="container">
+			<div class="banner-text">
+				<h2 class="hero-titulo">Mad Max: Estrada da Fúria</h2>
+
+				<p class="hero-genero">
+					<a href="#" class="hero-genero-item">Aventura</a>
+					<a href="#" class="hero-genero-item">SCI-FI</a>
+					<a href="#" class="hero-genero-item">Terror</a>
+				</p>
+	
+				<a href="#" class="hero-botao"
+					>Assitir Trailer <i class="fa fa-play-circle-o"></i
+				></a>
+	
+				<div class="hero-informacao">
+					<p>Nos Cinemas</p>
+					<p>15 de Outubro de 2015 (Brasil)</p>
+				</div>
+			</div>           
         </div>
-        <div class="col-lg-7 content-photo mt-lg-0 mt-auto">
-          <img src="{% static 'assets/images/main.jpg' %}" class="img-fluid img-fluid-modificado" alt="main image">
-        </div>
-      </div>
-      <div class="clear"></div>
     </div>
-  </div>
-</div>
-<!-- //index-block1 -->
-<section class="w3l-index5" id="about">
-  <div class="new-block py-5">
-    <div class="container py-lg-5">
-      <div class="middle-section text-center">
-        <div class="section-width">
-          <h2> A melhor maneira de gerenciar seus projetos e equipe.</h2>
-            <p class="mt-3"> A melhor maneira de gerenciar seus projetos e equipe. Lembretes de datas de vencimento. Obtenha resultados mais rápidos para cada marco do projeto. Sincronização de dados em tempo real.</p>
-        </div>
-        <div class="history-info mt-5">
-          <div class="position-relative">
-            <img src="{% static 'assets/images/video.jpg' %}" class="img-fluid rounded video-popup-image" alt="video-popup">
-            <!-- <a href="#popup-video" class="play-view text-center position-absolute">
-						<span class="video-play-icon">
-							<span class="fa fa-play"></span>
-						</span>
-					</a> -->
-
-            <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
-              <span class="video-play-icon">
-                <span class="fa fa-play"></span>
-              </span>
-            </a>
-
-            <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-            <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-              <iframe src="https://www.youtube.com/embed/Z_KspIX1oXU" allowfullscreen></iframe>
-            </div>
-
-            <!-- popup --
-            <div id="popup-video" class="pop-overlay">
-              <div class="popup">
-                <div class="align-popup-video">
-                  <iframe src="https://www.youtube.com/embed/Z_KspIX1oXU" allowfullscreen></iframe>
-                  <a class="close" href="#portfolio">×</a>
-                </div>
-
-              </div>
-            </div>
-            <!-- /popup -->
-
-
-          </div>
-        </div>
-
-        <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-          <iframe src="https://www.youtube.com/embed/Z_KspIX1oXU" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
-<section class="w3l-index2" id="services">
-  <div class="features-main py-5 text-center">
-    <div class="container py-lg-3">
-      <div class="heading mx-auto">
-        <h3 class="head">Oferecemos os melhores serviços</h3>
-        <p class="mb-4">Lorem ipsum dolor sit amet elit. Quo ut voluptate assumenda fugiat quas tempore.</p>
-      </div>
-      <div class="row features">
-        <div class="col-lg-4 col-md-6 feature-grid">
-          <a href="#url">
-            <div class="feature-body service1">
-              <div class="feature-img">
-                <span class="fa fa-bar-chart" aria-hidden="true"></span>
-              </div>
-              <div class="feature-info mt-4">
-                <h3 class="feature-titel mb-2">Marketing Services</h3>
-                <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nam, minima iste molestiae.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 feature-grid">
-          <a href="#url">
-          <div class="feature-body service2">
-            <div class="feature-img">
-              <span class="fa fa-laptop icon-fea" aria-hidden="true"></span>
-            </div>
-            <div class="feature-info mt-4">
-              <h3 class="feature-titel mb-2">Web App Development</h3>
-              <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nam, minima iste molestiae.
-              </p>
+		<section class="catalogo">
+		{% include 'include/navbar_body.html' %}
+			<div class="container">
+				<ul class="catalogo-filmes-lista">
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-moonlight.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Moonlight</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
 
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 feature-grid">
-          <a href="#url">
-          <div class="feature-body service3">
-            <div class="feature-img">
-              <span class="fa fa-line-chart" aria-hidden="true"></span>
-            </div>
-            <div class="feature-info mt-4">
-              <h3 class="feature-titel mb-2">24/7 Call Center Service</h3>
-              <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nam, minima iste molestiae.
-              </p>
-              <div class="hover">
-              </div>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 feature-grid">
-          <a href="#url">
-          <div class="feature-body service4">
-            <div class="feature-img">
-              <span class="fa fa-envelope-o" aria-hidden="true"></span>
-            </div>
-            <div class="feature-info mt-4">
-              <h3 class="feature-titel mb-2">Social Media Marketing</h3>
-              <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nam, minima iste molestiae.
-              </p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 feature-grid">
-          <a href="#url">
-          <div class="feature-body service5">
-            <div class="feature-img">
-              <span class="fa fa-signal icon-fea" aria-hidden="true"></span>
-            </div>
-            <div class="feature-info mt-4">
-              <h3 class="feature-titel mb-2">Corporate Business</h3>
-              <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nam, minima iste molestiae.
-              </p>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 feature-grid">
-          <a href="#url">
-          <div class="feature-body service6">
-            <div class="feature-img">
-              <span class="fa fa-paint-brush icon-fea" aria-hidden="true"></span>
-            </div>
-            <div class="feature-info mt-4">
-              <h3 class="feature-titel mb-2">Creative Consultancy</h3>
-              <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nam, minima iste molestiae.
-              </p>
-            </div>
-          </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="w3l-index3">
-  <div class="midd-w3 py-5">
-    <div class="container py-xl-5 py-lg-3">
-      <div class="row">
-        <div class="col-lg-6 left-wthree-img text-right">
-          <img src="{% static 'assets/images/g5.jpg' %}" alt="" class="img-fluid rounded" />
-        </div>
-        <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq">
-          <h6>Seu parceiro de negócios mais confiável</h6>
-          <h3 class="text-da">Leve seus projetos para o próximo nível.</h3>
-          <p class="mt-3">Etapas Desenvolvimento e gerenciamento de projetos
-            com um processo sistemático, oportuno e controlado.</p>
-          <ul class="w3l-right-book mt-4">
-            <li><span class="fa fa-check" aria-hidden="true"></span>Iniciação do Projeto</li>
-            <li><span class="fa fa-check" aria-hidden="true"></span>Planejamento do Projeto</li>
-            <li><span class="fa fa-check" aria-hidden="true"></span>Execução do Projeto</li>
-            <li><span class="fa fa-check" aria-hidden="true"></span>Monitoramento do Projeto</li>
-            <li><span class="fa fa-check" aria-hidden="true"></span>Encerramento do Projeto</li>
-          </ul>
-          <a href="about.html" class="btn btn-outline-style btn-outline-primary mt-4 py-3">Read More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="video-responsive">
-	<video class="video" muted="muted" loop="loop" autoplay="autoplay">
-		<source src="{% static 'assets/videos/meeting.mp4' %}" type="video/mp4">
-		Your browser does not support HTML5 video.
-	</video>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Moonlight</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Drama</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
 
-	<canvas class="canvas"></canvas>
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-bladerunner.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Blade Runner</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
 
-	<div id="over_video">
-		<div class="bg-mask">
-			<div class="video-heading">
-				<h3>A plataforma com as Soluções de Gerenciamento de Projetos</h3>
-				<p style="font-style: italic;  font-weight: 600;">"Trata-se de medir a progressão e o desempenho do projeto e garantir que tudo o que está acontecendo esteja alinhado com o plano de gerenciamento do projeto".</p>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Blade Runner</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-mad-max.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Mad Max</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Mad Max</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+								<a href="#" class="sinopse-genero-item">Terror</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-alita.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Alita</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Alita</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-batman-superman.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Batman VS Superman</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Batman VS Superman</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Ação,</a>
+								<a href="#" class="sinopse-genero-item">Drama,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-jurassic-world.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Jurassic World</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Jurassic World</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">Terror</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-civil-war.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Guerra Civil</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Guerra Civil</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">Ação,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-capita-marvel.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Capitã Marvel</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Capitã Marvel</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 9.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-coringa.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Coringa</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Coringa</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Suspense,</a>
+								<a href="#" class="sinopse-genero-item">Drama,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 10
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-liga-justica.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Liga da Justiça</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Liga da Justiça</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">Ação,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.5
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-star-wars.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Star Wars VII</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Star Wars VII</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-pantera-negra.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Pantera Negra</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Pantera Negra</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+				</ul>
 			</div>
-
-		</div>
-	</div>
-</div>
-<style>
-	.video-heading {
-		max-width: 750px;
-		margin: 0 auto;
-	}
-
-	.video-heading h3 {
-		font-size: 45px;
-		line-height: 58px;
-		text-transform: Capitalize;
-		font-weight: 600;
-		margin-bottom: 25px;
-		color: #fff;
-	}
-
-	.video-heading p {
-		margin: 0;
-		line-height: 28px;
-		font-size: 18px;
-		color: #fff;
-	}
-
-	.video-responsive {
-		padding-bottom: 400px;
-		position: relative;
-		width: 100%;
-	}
-
-	.canvas,
-	.video {
-		left: 0;
-		position: absolute;
-		top: 0;
-		background: #000;
-		z-index: 5;
-		overflow: hidden;
-		width: 100%;
-		height: 400px;
-		object-fit: cover;
-	}
-
-	#over_video {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		top: 0;
-		z-index: 10;
-		color: #FFF;
-	}
-
-	.bg-mask {
-		background: rgba(0, 0, 0, 0.3);
-		height: inherit;
-		display: grid;
-		align-items: center;
-		padding: 0 15px;
-	}
-
-	@media screen and (max-width: 568px) {
-
-		.canvas,
-		.video {
-			height: 400px;
-		}
-
-		.video-heading h3 {
-			font-size: 35px;
-			line-height: 48px;
-			margin-bottom: 20px;
-		}
-
-		.video-heading p {
-			line-height: 26px;
-			font-size: 16px;
-		}
-	}
-</style>
-
-<script src="{% static 'assets/js/canvas-video-player.js' %}"></script>
+		</section>
 
 
-<script>
-	var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-
-	if (isIOS) {
-
-		var canvasVideo = new CanvasVideoPlayer({
-			videoSelector: '.video',
-			canvasSelector: '.canvas',
-			timelineSelector: false,
-			autoplay: true,
-			makeLoop: true,
-			pauseOnClick: false,
-			audio: false
-		});
-
-	} else {
-
-		// Use HTML5 video
-		document.querySelectorAll('.canvas')[0].style.display = 'none';
-
-	}
-</script>
-<!-- scripts -->
-<section class="w3l-section-title" id="clients">
-  <div class="new-block py-5">
-    <div class="container pt-lg-5">
-      <div class="row">
-      <div class="col-md-4 title">
-        <h3>Nossos Parceiros</h3>
-      </div>
-      <div class="col-md-8 title-text">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi minima accusantium reiciendis, cupiditate optio corrupti quis quam at!.</p>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-<section class="w3l-logos pb-5 pt-4">
-  <div class="container pb-lg-3">
-    <div class="row">
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo1.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo2.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo3.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo4.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-    </div>
-    <div class="row mt-lg-4 mt-0">
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo3.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo4.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo1.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-      <div class="col-lg-3 col-6 logo-view">
-        <img src="{% static 'assets/images/logo2.jpg' %}" alt="company-logo" class="img-fluid" />
-      </div>
-    </div>
-  </div>
-</section>
-<div class="w3l-index6" id="news">
-  <!-- grids block 5 -->
-  <section id="grids5-block" class="py-5">
-    <div class="container py-lg-3">
-      <div class="heading text-center">
-        <h3 style="color: #343a40;" class="head">Nossas últimas notícias</h3>
-        <p>As partes interessadas importantes farão a devida diligência para ajudar a decidir se o projeto está em andamento.</p>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mt-5">
-          <div class="grids5-info">
-            <a href="#blog-single.html"><img src="{% static 'assets/images/g6.jpg'  %}" alt="" class="rounded" /></a>
-            <div class="blog-info">
-              <h4><a href="#blog-single.html">Creative Websites Design</a></h4>
-              <ul class="blog-list">
-                <li>
-                  <p><span class="fa fa-calendar-o"></span> Jan 24, 2020</p>
-                </li>
-                <li>
-                  <p><span class="fa fa-comments-o"></span> <strong>23</strong> comments</p>
-                </li>
-              </ul>
-              <p>Nulla eu ipsum tempus est et vitae nulla empus est
-                suscipit et dolor amet.</p>
-              <a href="#blog-single.html" class="btn btn-outline-secondary mt-4">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt-5">
-          <div class="grids5-info">
-            <a href="#blog-single.html"><img src="{% static 'assets/images/g2.jpg' %}" alt="" class="rounded" /></a>
-            <div class="blog-info">
-              <h4><a href="#blog-single.html">SEO Optimization Services</a></h4>
-              <ul class="blog-list">
-                <li>
-                  <p><span class="fa fa-calendar-o"></span> Mar 14, 2020</p>
-                </li>
-                <li>
-                  <p><span class="fa fa-comments-o"></span> <strong>12</strong> comments</p>
-                </li>
-              </ul>
-              <p>Nulla eu ipsum tempus est et vitae nulla empus est
-                suscipit et dolor amet.</p>
-              <a href="#blog-single.html" class="btn btn-outline-secondary mt-4">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 offset-md-3 offset-lg-0 col-md-6 mt-5">
-          <div class="grids5-info">
-            <a href="#blog-single.html"><img src="{% static 'assets/images/g3.jpg' %}" alt="" class="rounded" /></a>
-            <div class="blog-info">
-              <h4><a href="#blog-single.html">Corporate Management</a></h4>
-              <ul class="blog-list">
-                <li>
-                  <p><span class="fa fa-calendar-o"></span> Oct 05, 2020</p>
-                </li>
-                <li>
-                  <p><span class="fa fa-comments-o"></span> <strong>16</strong> comments</p>
-                </li>
-              </ul>
-              <p>Nulla eu ipsum tempus est et vitae nulla empus est
-                suscipit et dolor amet.</p>
-              <a href="#blog-single.html" class="btn btn-outline-secondary mt-4">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<section class="w3l-index4">
-  <div class="section-four gotocontact py-5">
-    <div class="container py-xl-5 py-lg-3">
-      <div class="row align-items-center">
-        <div class="col-xl-7 col-lg-6">
-          <div class="heading white">
-            <h3>Oferecemos as melhores maneiras de tornar a vida mais fácil e gerenciável!!</h3>
-            <p style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 19px;" class="mt-4 ">"Revise no final de cada fase e faça ajustes no plano do projeto conforme necessário!"</p>
-          </div>
-        </div>
-        <div class="offset-xl-1 offset-0 col-xl-3 col-lg-6 text-lg-right mt-5 mt-lg-0">
-          <a class="btn btn-light btn-outline-style py-3" href="contact.html" title="Contact Us!"><span
-              class="fa fa-location-arrow mr-2"></span>Contact Us!</a>
-        </div>
-      </div>
-    </div>
-</section>
-
-
- {% endblock %}
+{% endblock %}

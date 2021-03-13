@@ -1,37 +1,21 @@
 {% load static %}
 
 
-<style>
 
-</style>
+<header class="">
+    <a href="#" class="hero-logo">
+        <img src="{% static 'img/logo-imdb.jpg' %}" alt="Logo IMDB" />
+    </a>
+    <ul class="hero-lista">
+        <li class="hero-lista-item"><a href="{% url 'index' %}">Home</a></li>
+        <li class="hero-lista-item"><a href="{% url 'lancamentos' %}">Lançamentos</a></li>        
+        <li class="hero-lista-item"><a href="{% url 'cartaz' %}">Em Cartaz</a></li>
+    </ul>
+    <ul class="hero-lista accounts">
+        <li class="hero-lista-item"><a href="{% url 'login' %}">Login</a></li>
+        <span>/</span>
+        <li class="hero-lista-item"><a href="#">Register</a></li>       
+    </ul>
+</header>
 
-<section class="w3l-header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"></span>Work<label class="logo-view">smart<span class="point">.</span></label></a>
-        <!-- if logo is image enable this   
-      <a class="navbar-brand" href="#index.html">
-          <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-      </a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>  
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item menu ">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item menu">
-              <a class="nav-link" href="#about">Sobre nós</a>
-            </li>           
-            <li class="nav-item  menu">
-              <a class="nav-link" href="#contact">Contatos</a>
-            </li>
-            <li class="nav-item login ">
-                <a class="nav-link " href="#contact">Login </a>
-              </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </section>
+

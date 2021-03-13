@@ -1,0 +1,133 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+
+
+
+{% block dashbaord %}
+
+<section class="section">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="card card-statistic-2">
+                <div class="card-stats">
+                  <div class="card-stats-title">Estatísticas de Videos -
+                    <div class="dropdown d-inline">
+                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">Agosto</a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li class="dropdown-title">Selecione o Mês</li>
+                        <li><a href="#" class="dropdown-item">Janeiro</a></li>
+                        <li><a href="#" class="dropdown-item">Fevereiro</a></li>
+                        <li><a href="#" class="dropdown-item">Março</a></li>
+                        <li><a href="#" class="dropdown-item">Abril</a></li>
+                        <li><a href="#" class="dropdown-item">Maio</a></li>
+                        <li><a href="#" class="dropdown-item">Junho</a></li>
+                        <li><a href="#" class="dropdown-item">Julho</a></li>
+                        <li><a href="#" class="dropdown-item active">Agosto</a></li>
+                        <li><a href="#" class="dropdown-item">Setembro</a></li>
+                        <li><a href="#" class="dropdown-item">Outubro</a></li>
+                        <li><a href="#" class="dropdown-item">Novembro</a></li>
+                        <li><a href="#" class="dropdown-item">Dezembro</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-stats-items">
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">{{ movie }}</div>
+                      <div class="card-stats-item-label">Filmes</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">{{ serie }}</div>
+                      <div class="card-stats-item-label">TV Séries</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">0</div>
+                      <div class="card-stats-item-label">Documentários</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-icon shadow-primary bg-background__modifier">
+                  <i style="color: #fff;" class="fa fa-video-camera"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Videos</h4>
+                  </div>
+                  <div class="card-body">
+                    {{ movie_total }}
+                  </div>
+                </div>
+              </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="card card-statistic-2">
+                <div class="card-stats">
+                  <div class="card-stats-title">Estatísticas de Visualizações -                   
+                  </div>
+                  <div class="card-stats-items">
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">24</div>
+                      <div class="card-stats-item-label">Filmes</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">12</div>
+                      <div class="card-stats-item-label">TV Séries</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">23</div>
+                      <div class="card-stats-item-label">Documentários</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-icon shadow-primary bg-background__modifier">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Ordens</h4>
+                  </div>
+                  <div class="card-body">
+                    59
+                  </div>
+                </div>
+              </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="card card-statistic-2">
+                <div class="card-stats">
+                  <div class="card-stats-title">Estatísticas de Usuários -                    
+                  </div>
+                  <div class="card-stats-items">
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">24</div>
+                      <div class="card-stats-item-label">Ativos</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">12</div>
+                      <div class="card-stats-item-label">Inativos</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">23</div>
+                      <div class="card-stats-item-label">Pendente</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-icon shadow-primary bg-background__modifier">
+                  <i class="fas fa-child"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Usuários</h4>
+                  </div>
+                  <div class="card-body">
+                    59
+                  </div>
+                </div>
+              </div>
+    </div>         
+  </div> 
+ 
+</section>
+
+
+{% endblock %}

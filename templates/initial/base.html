@@ -1,151 +1,29 @@
 {% load static %}
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>IMDB - Classificações, Críticas e Onde Assistir os Melhores Filmes e Programas de TV</title>
+		<meta name="description" content="" />
+		<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Worksmart | Sistema de gerenciamento de projetos</title>
+		<link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 
-    <!-- Google online fonts -->
-    <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </head>
-  <body>
-   
-
-
-    {% include 'include/navbar.html' %}
-{% block index %}
+		<!------------FONTAWESOME------------------------>
+		<script src="https://kit.fontawesome.com/55bcbae4d6.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		{% include 'include/navbar.html' %}
+    {% block index %}
 
 
 
+    {% endblock %}
+    {% include 'include/footer.html' %}
 
-{% endblock %}
-{% include 'include/footer.html' %}
-
-    <!-- jQuery -->
-    <script src="{% static 'assets/js/jquery-3.4.1.slim.min.js' %}"></script>
-    <!-- Bootstrap js -->
-    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-
-    <!-- disable body scroll which navbar is in active -->
-    <script>
-      $(function () {
-        $('.navbar-toggler').click(function () {
-          $('body').toggleClass('noscroll');
-        })
-      });
-    </script>
-    <!-- disable body scroll which navbar is in active -->
-
-
-
-    <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
-    <!-- script for teams1-->
-    <script>
-      $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
-          loop: true,
-          margin: 0,
-          responsiveClass: true,
-          responsive: {
-            0: {
-              items: 1,
-              nav: true
-            },
-            667: {
-              items: 2,
-              nav: true,
-              margin: 20
-            },
-            1000: {
-              items: 4,
-              nav: true,
-              loop: true,
-              margin: 25
-            }
-          }
-        })
-      })
-    </script>
-    <!-- //script for teams1-->
-
-    <script>
-      $(document).ready(function () {
-
-        var $menuBtn = $('.menu-btn');
-        var $nav = $('#nav');
-        var $stylebox = $('#style-box');
-        var $styleli = $stylebox.find('li');
-
-        $menuBtn.on('click', function () {
-          var $this = $(this);
-          var styles = $stylebox.data('styles');
-          $this.toggleClass("active");
-          $this.next('#nav').toggleClass("open");
-          $stylebox.toggleClass(styles);
-        });
-
-        $nav.addClass('topslide');
-
-        $styleli.on('click', function () {
-          var $this = $(this);
-          $this.siblings().removeClass('now');
-          $this.addClass('now');
-          var styles = $this.data('styles');
-          $nav.removeClass();
-          $nav.addClass(styles);
-          $nav.siblings('#style-box').removeClass();
-          $nav.siblings('#style-box').data('styles', styles);
-        });
-      });
-    </script>
-
-    <script src="{%  static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
-    <script>
-      $(document).ready(function () {
-        $('.popup-with-zoom-anim').magnificPopup({
-          type: 'inline',
-
-          fixedContentPos: false,
-          fixedBgPos: true,
-
-          overflowY: 'auto',
-
-          closeBtnInside: true,
-          preloader: false,
-
-          midClick: true,
-          removalDelay: 300,
-          mainClass: 'my-mfp-zoom-in'
-        });
-
-        $('.popup-with-move-anim').magnificPopup({
-          type: 'inline',
-
-          fixedContentPos: false,
-          fixedBgPos: true,
-
-          overflowY: 'auto',
-
-          closeBtnInside: true,
-          preloader: false,
-
-          midClick: true,
-          removalDelay: 300,
-          mainClass: 'my-mfp-slide-bottom'
-        });
-      });
-    </script>
-
-</body>
-</html>
+	<script src="{% static  'js/mean.js' %}"></script>
+    </body>
+    </html>

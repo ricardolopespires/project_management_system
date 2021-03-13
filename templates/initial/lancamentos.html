@@ -1,0 +1,333 @@
+{% extends 'initial/base.html' %}
+{% load static %}		
+
+
+
+{% block index %}
+
+<section class="banner-lancamentos">
+	<div class="hero-conteudo">
+        <div class="container">
+			<div class="banner-text">
+				<h2 class="hero-titulo">Relatos do Mundo</h2>
+
+				<p class="hero-genero">
+					<a href="#" class="hero-genero-item">Ação</a>
+					<a href="#" class="hero-genero-item">Aventura</a>
+					<a href="#" class="hero-genero-item">Drama</a>
+				</p>
+	
+				<a href="#" class="hero-botao"
+					>Assitir Trailer <i class="fa fa-play-circle-o"></i
+				></a>
+	
+				<div class="hero-informacao">
+					<p>Lançamentos</p>
+					<p>24 de Dezembro de 2020 (Brasil)</p>
+				</div>
+			</div>           
+        </div>
+    </div>
+</section>
+
+
+		<section class="catalogo">
+		{% include 'include/navbar_body.html' %}
+
+		
+		<section id="lancamentos" class="section-padding about-section">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="section-title">
+						<div class="section-subtitle"><i class="fas fa-film"></i>Lançamentos</div>
+						<h2 class="section-main-title">Os melhores <strong>Lançamentos</strong></h2>
+					</div>
+					<div class="about-item">
+						<p>
+							Confira os melhores lançamentos, grandes clássicos do cinema mundial, agora podem assistir a tudo isso com ajuda da melhor enciclopédia do cinema e da televisão
+						</p>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		
+			<div class="container">
+
+			
+				<ul class="catalogo-filmes-lista">
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-moonlight.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Moonlight</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Moonlight</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Drama</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-bladerunner.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Blade Runner</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Blade Runner</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-mad-max.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Mad Max</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Mad Max</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+								<a href="#" class="sinopse-genero-item">Terror</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-alita.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Alita</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Alita</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-batman-superman.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Batman VS Superman</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Batman VS Superman</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Ação,</a>
+								<a href="#" class="sinopse-genero-item">Drama,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-jurassic-world.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Jurassic World</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Jurassic World</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">Terror</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-civil-war.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Guerra Civil</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Guerra Civil</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">Ação,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-capita-marvel.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Capitã Marvel</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Capitã Marvel</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 9.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-coringa.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Coringa</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Coringa</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Suspense,</a>
+								<a href="#" class="sinopse-genero-item">Drama,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 10
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-liga-justica.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Liga da Justiça</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Liga da Justiça</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">Ação,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.5
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-star-wars.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Star Wars VII</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Star Wars VII</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+
+					<li class="catalogo-filmes-lista-item">
+						<figure class="filme-poster">
+							<img src="{% static 'img/poster-pantera-negra.jpg' %}" alt="" />
+							<div class="filme-poster-info">
+								<h3>Pantera Negra</h3>
+								<a href="#" class="filme-poster-link"
+									><i class="fa fa-play" aria-hidden="true"></i
+								></a>
+							</div>
+						</figure>
+						<div class="filme-sinopse">
+							<h3 class="filme-sinopse-titulo">Pantera Negra</h3>
+							<p class="sinopse-genero">
+								<a href="#" class="sinopse-genero-item">Aventura,</a>
+								<a href="#" class="sinopse-genero-item">SCI-FI,</a>
+							</p>
+							<p class="filme-nota">
+								<i class="fa fa-heart" aria-hidden="true"></i> 7.0
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+
+{% endblock %}

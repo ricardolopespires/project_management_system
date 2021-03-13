@@ -1,0 +1,149 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block management %}
+<div class="section-header">
+    <div class="slider-outer">
+        <div class="slider-inner">
+            <div class="  statistic fron active" data-slider="1">
+                <i class="fas fa-info"></i>
+				
+                <div class="statistic-title">Filmes</div>
+                <h2 class="title-statistic-h2">Informações</h2>
+                              
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="section-body">      	
+		<div class="dashboard-container">
+            <h2 class="section-title">Informações do Filmes: <span>{{ object }}</span> </h2>
+            <p class="section-lead">
+                Skrn - Site completo com filmes lançamentos, séries em HD online dublado e legendado em HD e FullHD. 
+            </p>
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-4">
+                  <article class="article article-style-">
+                    <div class="article-header">
+                    {% if our_db is True%}
+                    <div  class="article-image" data-background="{{ movie_data.Poster_url }}"></div>
+                    {% else %}
+                    <div  class="article-image" data-background="{{ movie_data.Poster }}"></div>
+                    {% endif %}                  
+                    </div>                   
+                  </article>
+                </div>
+                <div class="col-12 col-sm-12 col-lg-7">
+                    <div class="card author-box card-warning">
+                      <div class="card-body">                        
+                        <div >
+                          <div class="author-box-name">
+                            <a href="#">{{ movie_data.Title }}</a>
+                        </div>
+                        <div class="author-box-job"><li><span>Tipo:</span> <a href="#">{{ movie_data.Type }}</a></li></div>
+                        <div class="author-box-job"><li><span>Descrição:</span> <a href="#">{{ movie_data.Plot }}</a></li></div>
+                        <div class="author-box-job"><li><span>Ano de Lançamento:</span> <a href="#">{{ movie_data.Year }}</a></li></div>
+                        <div class="author-box-job"><li><span>Avaliado:</span> <a href="#">{{ movie_data.Rated }}</a></li></div>
+                        <div class="author-box-job"><li><span>Data de Lançamento:</span> <a href="#">{{ movie_data.Released }}</a></li></div>
+                        <div class="author-box-job"><li><span>Runtime:</span> <a href="#">{{ movie_data.Runtime }}</a></li></div>
+                        <div class="author-box-job"><li><span>Popularidade:</span> <a href="#">{{ movie_data.Popularity }}</a></li></div>
+
+          
+                          {% if our_db is True %}
+                          <div class="author-box-job"><li ><span>Categorias:{% for genre in movie_data.Genre.all %}</span> <a href="#">Ação,</a> <a href="#">{{ genre }},</a>{% endfor %}</li></div>
+                          {% else %}
+                          <div class="author-box-job"><li ><span>Categorias:</span><a href="#">{{ movie_data.Genre }},</a></li></div>
+                          {% endif %}
+                          <div class="author-box-job"><li><span>Diretores:</span> <a href="#">{{ movie_data.Director }}</a></li></div>
+                          <div class="author-box-job"><li><span>Escritor(a):</span> <a href="#">{{ movie_data.Writer }}</a></li></div>
+                          {% if our_db is True %}
+                          <div class="author-box-job"><li><span>Atores:{% for actor in movie_data.Actors.all %}</span> <a href="{% url 'actor:details' actor.slug %}">{{ actor }}</a>{% endfor %}</li></div>
+                          {% else %}
+                          <div class="author-box-job"><li><span>Atores:</span> <a href="">{{ movie_data.Actors }}</a></li></div>
+                          {% endif %}
+                          <div class="author-box-job"><li><span>Linguagem:</span> <a href="#">{{ movie_data.Language }}</a></li></div>
+                          <div class="author-box-job"><li><span>País:</span> <a href="#">{{ movie_data.Country }}</a></li></div>
+                          <div class="author-box-job"><li><span>Prêmios:</span> <a href="#">{{ movie_data.Awards }}</a></li></div>
+                         
+                          <div class="author-box-description">
+                            <p>{{ movie.Overview}}</p>
+                          </div>                         
+                            <br>                                               
+                          <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder">                                                                          
+                             <li class="media">
+                                {% if  our_db is True %}
+                                {% for movie in movie_data.Ratings.all %}   
+                                {% if movie.source == 'Internet Movie Database' %}                 
+                                <div class="media-items">
+                                  <div class="media-item">
+                                    <div class="media-value">{{ movie.rating }}</div>
+                                    <div class="media-label">{{ movie.source }} </div>                                   
+                                </div>
+                                  </div>
+                                  {% elif movie.source == 'Rotten Tomatoes' %} 
+                                  <div class="media-items"> 
+                                  <div class="media-item">
+                                    <div class="media-value">{{ movie.rating }}</div>
+                                    <div class="media-label">{{ movie.source }} </div>
+                                  </div>
+                                  </div>
+                                  {% else %} 
+                                 <div class="media-items"> 
+                                  <div class="media-item">
+                                    <div class="media-value">{{ movie.rating }}</div>
+                                    <div class="media-label">{{ movie.source }} </div>
+                                  </div>
+                                 </div>
+                                 {% endif %}
+                                 {% endfor %}
+                                 {% else %}
+                        </li>    
+                            <li class="media">                            
+                                <div class="media-body">
+                                    <img src="" alt="">
+                                  <div class="media-title">{{ movie_data.Ratings.0.Source }} </div>
+                                  <div class="text-job text-muted">{{ movie_data.Ratings.0.Value }}</div>
+                                </div>
+                                <div class="media-progressbar">
+                                  <div class="progress-text"></div>                                 
+                                </div>                             
+                              </li> 
+                              <li class="media">                            
+                                <div class="media-body">
+                                    <img src="" alt="">
+                                  <div class="media-title">{{ movie_data.Ratings.1.Source }} </div>
+                                  <div class="text-job text-muted">{{ movie_data.Ratings.1.Value }}</div>
+                                </div>
+                                <div class="media-progressbar">
+                                  <div class="progress-text"></div>                                 
+                                </div>                             
+                              </li> 
+                              <li class="media">                            
+                                <div class="media-body">
+                                    <img src="" alt="">
+                                  <div class="media-title">{{ movie_data.Ratings.2.Source }} </div>
+                                  <div class="text-job text-muted">{{ movie_data.Ratings.2.Value }}</div>
+                                </div>
+                                <div class="media-progressbar">
+                                  <div class="progress-text"></div>                                 
+                                </div>                             
+                              </li> 
+                            {% endif %}                           
+                          </ul>                          
+                          <div class="author-box-job"><li><span>Box Office:</span> <a href="#">{{ movie_data.BoxOffice }}</a></li></div>
+                          <div class="author-box-job"><li><span>imdb Votes:</span> <a href="#">{{ movie_data.omdbVotes }}</a></li></div>
+                          <div class="author-box-job"><li><span>Production:</span> <a href="#">{{ movie_data.Production }}</a></li></div>
+                          <div  class=" mt-sm-0 mt-3 btn-movie ">
+                            <a  href="#" class="btn"><i class="far fa-edit"></i></a>
+                            <a href="#" class="btn"><i class="far fa-trash-alt"></i></a>
+                          </div>                          
+                        </div>
+                      </div>
+                    </div>                   
+                  </div>            
+              </div>			
+	    </div><!-- close .row -->									
+	</div><!-- close .dashboard-container -->
+  
+
+{% endblock %}

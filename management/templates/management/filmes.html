@@ -1,0 +1,43 @@
+{% extends 'management/base.html' %}
+{% load static %}
+
+
+
+{% block management %}
+<div class="section-header">
+    <div class="slider-outer">
+        <div class="slider-inner">
+            <div class="  statistic fron active" data-slider="1">
+                <i class="fas fa-film"></i>
+				
+                <div class="statistic-title">Management</div>
+                <h2 class="title-statistic-h2">Filmes  </h2>
+                              
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="section-body">      	
+		<div class="dashboard-container">
+            <h2 class="section-title">Informações do Filmes: <span>{{ object }}</span> </h2>
+            <p class="section-lead">
+                Skrn - Site completo com filmes lançamentos, séries em HD online dublado e legendado em HD e FullHD. 
+            </p>
+
+            <div class="row">
+                <div class="col-4 col-md-4 col-lg-4">
+                  <article class="article article-style-">
+                    <div class="article-header">
+                      <div  class="article-image" data-background="{{ object.images }}">
+                      </div>
+                    </div>
+                   
+                  </article>
+                </div>              
+                
+              </div>			
+	    </div><!-- close .row -->									
+	</div><!-- close .dashboard-container -->
+  
+
+{% endblock %}

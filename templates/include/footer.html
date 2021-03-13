@@ -1,78 +1,25 @@
-{% load static %}   
-   <!-- footer -->
-    <footer class="w3l-footer">
-        <div class="footer-29 py-5">
-          <div class="container pb-lg-3">
-            <div class="row footer-top-29">
-              <div class="col-md-6 footer-list-29 footer-1 mt-md-4">
-                <h6 class="footer-title-29">Contatos</h6>
-                <ul>
-                  <li>
-                    <span class="fa fa-map-marker"></span>
-                    <p> Workflow, 433 California St, Suite 300 San Francisco, <br>CA 94104, USA</p>
-                  </li>
-                  <li>
-                    <span class="fa fa-phone"></span>
-                    <a href="tel:+44 99 555 42"> +44 99 555 42</a></li>
-                  <li>
-                    <span class="fa fa-envelope-open-o"></span>
-                    <a href="mailto:mailid@mail.com" class="mail">
-                      mailid@mail.com</a></li>
-                </ul>
-                <div class="main-social-footer-29">
-                  <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                  <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                  <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                  <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
-                  <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
-                </div>
-              </div>
-  
-              <div class="col-md-6 footer-list-29 footer-4 mt-md-4 mt-5">
-                <h6 class="footer-title-29">Subscribe</h6>
-                <p>Se increva no nosso canal informativo, para você receber as melhor informação sobre gerenciamento de projetos.</p>
-                <form action="#" method="post" class="rightside-form mt-4">
-                  <input type="email" name="email" placeholder="Digite o seu email">
-                  <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
-                </form>
-                </ul>
-              </div>
-            </div>
-            <div class="row bottom-copies">
-              <p class="copy-footer-29 col-lg-7 text-lg-left text-center">© 2020 Worksmart. All rights reserved | Design by <a
-                  href="https://w3layouts.com/">W3Layouts</a></p>
-              <ul class="list-btm-29 col-lg-5 text-lg-right text-center">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Sobre nós</a></li>
-                <li><a href="contact.html">Contatos</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- move top -->
-        <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
-          <span class="fa fa-angle-up"></span>
-        </button>
-        <script>
-          // When the user scrolls down 20px from the top of the document, show the button
-          window.onscroll = function () {
-            scrollFunction()
-          };
-  
-          function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.getElementById("movetop").style.display = "block";
-            } else {
-              document.getElementById("movetop").style.display = "none";
-            }
-          }
-  
-          // When the user clicks on the button, scroll to the top of the document
-          function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-          }
-        </script>
-        <!-- /move top -->
-      </footer>
-      <!-- // footer -->
+{% load static %}
+    
+<footer class="rodape">
+    <div class="container">
+        <img class="rodape-imagem" src="{% static 'img/logo-imdb.jpg' %}" alt="" />
+
+        <ul class="rodape-lista">
+            <li class="rodape-lista-item icone-twitter">
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="rodape-lista-item icone-facebook">
+                <a href="#">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="rodape-lista-item icone-instagram">
+                <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>

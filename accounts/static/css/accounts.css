@@ -1,0 +1,33 @@
+
+.card-header--modifier
+{
+    font-size: 28px;
+}
+
+.login-brand-modifier img
+{
+    width: 280px;
+    
+    
+}
+
+
+.btn-primary-modifier
+{
+    background: #202442;
+    color: #fff;
+    border: transparent;
+}
+
+.btn-primary-modifier:hover
+{
+    border: 1px solid #202442!important;
+    
+}
+
+
+.section-body-modifier
+{
+    position: relative;
+    margin-top: 70px!important;
+}
